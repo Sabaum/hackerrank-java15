@@ -31,22 +31,6 @@ public class PoisonousPlants {
         }
         return daysCounter;
     }
-
-
-
-    private static int resolve(List<Integer> p, boolean allPlantsSurvived, int daysCounter) {
-        while (!allPlantsSurvived) {
-            allPlantsSurvived = true;
-            daysCounter++;
-            for (int i = (p.size() - 1); i > 0; i--) {
-                if (p.get(i) > p.get(i - 1)) {
-                    p.remove(i);
-                    allPlantsSurvived = false;
-                }
-            }
-        }
-        return daysCounter;
-    }
 }
 
 class PlantResult {
